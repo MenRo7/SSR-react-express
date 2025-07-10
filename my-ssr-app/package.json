@@ -2,13 +2,12 @@
   "name": "my-ssr-app",
   "private": true,
   "version": "0.0.0",
-  "type": "module",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint .",
     "preview": "vite preview",
-    "build:server": "node esbuild.config.mjs",
+    "build:server": "node esbuild.config.js",
     "start": "node build/server.js"
   },
   "dependencies": {
