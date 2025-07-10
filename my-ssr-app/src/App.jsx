@@ -7,7 +7,7 @@ export default function App({ todos }) {
       <ul>
         {todos.map((todo) => (
           <li key={todo.id}>
-            {todo.title} {todo.completed ? "✅" : "❌"}
+            {todo.title} {todo.completed ? "completed" : "NOT completed"}
           </li>
         ))}
       </ul>
