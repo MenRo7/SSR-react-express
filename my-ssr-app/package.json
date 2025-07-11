@@ -4,10 +4,11 @@
   "version": "0.0.0",
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
+    "build": "node esbuild.config.js",
     "lint": "eslint .",
     "preview": "vite preview",
-    "build:server": "node esbuild.config.js",
+    "build:client": "esbuild src/main.jsx --bundle --outfile=dist/bundle.js --loader:.js=jsx",
+    "build:server": "esbuild server/server.jsx --bundle --outfile=build/server.js --platform=node --format=esm",
     "start": "node build/server.js"
   },
   "dependencies": {
